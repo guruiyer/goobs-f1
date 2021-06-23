@@ -58,3 +58,15 @@
 .site-layout .site-layout-background {
   background: #fff;
 }
+
+.spinner {
+  margin: 20px 0;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+.spinner {
+  background: rgba(255,255,255,0.08);
+}
