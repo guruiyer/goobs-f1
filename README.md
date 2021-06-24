@@ -11,7 +11,11 @@ Race Details:
 TODOs: 
 
 - Switch from WeatherStack to OpenWeatherMap (usage limit reached :( )
+- Add a nice lookin weather component
+- Moar race info
 - Add circuit P1/P2/Quali/Race schedule
+- Update schedule cards to look nicer
+- Add country flag to race detail header
 - Add all circuit layout maps in assets/img folder
 - Update project structure and start putting pages into /pages, components into /components folders and refactor
 - News API integration 
