@@ -14,7 +14,7 @@ const Main = () => {
             <Route exact path='/Schedule' component={Schedule}></Route>
             <Route exact path='/scatter' component={Scatter} />
             <Route path="/RaceDetails" component={RaceDetails}>
-                <Route path="/:raceid" component={RaceDetail}/>
+                <Route path="/:raceName" component={RaceDetail}/>
             </Route>
         </Switch>
     );

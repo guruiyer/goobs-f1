@@ -14,7 +14,7 @@ function App() {
         <Layout style={{height:"100vh"}}>
             <Sider>
                 <div className="App">
-                    <div className="logo"><img width={150} src={logo} /></div>
+                    <div className="logo"><img width={110} src={logo} /></div>
                     <Navbar/>
                 </div>
             </Sider>
@@ -24,9 +24,7 @@ function App() {
                 <Content
                     className="site-layout-background"
                     style={{
-                        margin: '24px 16px',
-                        padding: 24,
-                        minHeight: 280,
+                        margin: '24px 16px'
                     }}
                 >
                     <Main />

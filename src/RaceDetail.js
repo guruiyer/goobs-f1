@@ -16,21 +16,19 @@ import {
     useParams
   } from "react-router-dom";
   
+const { Header, Footer, Sider, Content } = Layout;
 const { Countdown } = Statistic;
-
 const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
-const { Header } = Layout;
-
   
 export const RaceDetail = (props) => {
     const b = props.match.url.length + 1
-    const a = props.location.pathname.substring(b).toUpperCase();
+    const a = props.location.pathname.substring(b);
+    const z = props.location.country
+
     return (     
         <React.Fragment>  
             <Header style={{color: 'white', textAlign: "center"}}>{a}</Header>   
-            <div>
-                <WeatherClient countrycode={a}/>
-            </div>       
+            <WeatherClient countrycode={a} country={z}/>
         </React.Fragment>
     );
 
