@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manuale&family=Text+Me+One&family=Wire+One&display=swap');
+
 .App {
   text-align: center;
 }
@@ -69,4 +71,41 @@
 }
 .spinner {
   background: rgba(255,255,255,0.08);
+}
+
+
+
+p {
+  font-family: 'Text Me One', sans-serif;
+}
+
+.racephoto {
+  height: 500px;
+  width: 900px;
+}
+
+.driverphoto {
+  height: 200px;
+  width: 200px;
+}
+
+.constructorLogo {
+  height: 10px;
+  width: 10px;
+}
+
+.drivernumber {
+  height: 100px;
+  width: 170px;
+}
+
+.productsContainer {
+  display: flex;
+  align-items: center;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
 }

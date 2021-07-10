@@ -2,21 +2,14 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 
 const data = {
-  labels: ['1', '2', '3', '4', '5', '6'],
+  labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
   datasets: [
     {
-      label: 'Hamilton',
-      data: [25, 44, 69, 94, 101],
+      label: 'Points Tracker',
+      data: [18, 43, 61, 80, 105, 130, 155, 167, 182],
       fill: false,
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgba(255, 99, 132, 0.2)',
-    },
-    {
-      label: 'Verstappen',
-      data: [18, 43, 61, 80, 105],
-      fill: false,
-      backgroundColor: 'blue',
-      borderColor: 'blue',
+      backgroundColor: '#161c2c',
+      borderColor: '#161c2c',
     },
   ],
 };
@@ -33,13 +26,13 @@ const options = {
   },
 };
 
-const LineChart = () => (
+export const Scatter = () => (
   <>
     <div className='header'>
-      <h1 className='title'>Line Chart</h1>
+      <h1 className='title'></h1>
     </div>
     <Line data={data} options={options} />
   </>
 );
 
-export default LineChart;
+export default Scatter;

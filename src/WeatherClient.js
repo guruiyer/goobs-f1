@@ -50,12 +50,13 @@ export const WeatherClient = (props) => {
             }
             <div className="site-card-wrapper">
                 <Row>
-                <Col span={12}>
-                    <Card style={{}} cover={<img width={"10%"} src={austria}/>} title="Track Details" type="inner">
-                        <p><strong>Practice 1</strong></p>
-                        <p><strong>Practice 2</strong></p>
-                        <p><strong>Qualifying</strong></p>
-                        <p><strong>Race</strong></p>
+                <Col span={8}>
+                    <Card style={{}} title="Track Details" type="inner">
+                        <img className="racephoto" src={austria}/><br/><br/>
+                        <strong>Practice 1</strong><br/><br/>
+                        <strong>Practice 2</strong><br/><br/>
+                        <strong>Qualifying</strong><br/><br/>
+                        <strong>Race</strong>
                     </Card>
                 </Col>
                 <Col span={12}>

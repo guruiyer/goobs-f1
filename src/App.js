@@ -11,7 +11,8 @@ const { Header, Sider, Content } = Layout;
 
 function App() {
     return (
-        <Layout style={{height:"100vh"}}>
+        
+        <Layout style={{height:"220vh"}}>
             <Sider>
                 <div className="App">
                     <div className="logo"><img width={110} src={logo} /></div>
@@ -24,7 +25,7 @@ function App() {
                 <Content
                     className="site-layout-background"
                     style={{
-                        margin: '24px 16px'
+                        margin: '36px 56px'
                     }}
                 >
                     <Main />
