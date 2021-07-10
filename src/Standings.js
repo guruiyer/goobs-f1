@@ -21,6 +21,7 @@ import  mclaren  from './assets/images/constructors/mclaren.png';
 import  mercedes  from './assets/images/constructors/mercedes.png';
 import  red_bull  from './assets/images/constructors/red_bull.png';
 import  williams  from './assets/images/constructors/williams.png';
+import { AppleOutlined, TrophyOutlined, ToolOutlined } from '@ant-design/icons';
 
 const { Header } = Layout;
 const URL = "http://ergast.com/api/f1/current/driverStandings.json";
@@ -185,7 +186,9 @@ export const Standings = () => {
                 </div> 
         }
     <Tabs defaultActiveKey="1" onChange={callback}>
-        <TabPane tab=" Driver Standings" key="1">
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+        <TabPane tab={<span><TrophyOutlined />Driver Standings</span>} key="1">
             <div>
                 <Header style={{color: 'white', textAlign: "center"}}>{Races.season} Formula 1 World Championship Driver Standings</Header>
                     <Table columns={columns} dataSource={driverTable} 
@@ -195,14 +198,10 @@ export const Standings = () => {
                     }})}/>
             </div>
         </TabPane>
-        <TabPane tab="Constructor Standings" key="2">
+        <TabPane tab={<span><ToolOutlined />Constructor Standings</span>} key="2">
         <div>
                 <Header style={{color: 'white', textAlign: "center"}}>{Races.season} Formula 1 World Championship Constructor Standings</Header>
-                    <Table columns={constructorColumns} dataSource={constructorTable} 
-                        onRow={(r) => ({
-                            onClick: () => {
-                                showModal(r)
-                    }})}/>
+                    <Table pagination={{hideOnSinglePage: true}} columns={constructorColumns} dataSource={constructorTable}/>
             </div>
         </TabPane>
     </Tabs>

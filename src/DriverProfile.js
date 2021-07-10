@@ -12,7 +12,7 @@ import max from './max.png';
 import max_no from './max_no.png';
 import { Tabs } from 'antd';
 import { Scatter } from './Scatter';
-
+import red_bull from './assets/images/teams/red_bull.png';
 const { TabPane } = Tabs;
 const URL = "http://ergast.com/api/f1/current/driverStandings.json";
 
@@ -47,7 +47,7 @@ export const DriverProfile = (props) => {
                     <div className="products">
                     <Row gutter={16}>
                         <Col span={8}>
-                            <Statistic title="Team" value={"Red Bull Racing"} />
+                            <img className="teamphoto" src={red_bull}/>
                         </Col>
                         <Col span={8}>
                             <Statistic title="Career Points" value={2390} precision={0} />  
