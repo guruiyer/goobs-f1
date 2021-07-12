@@ -6,7 +6,8 @@ import {Layout, Table} from "antd";
 import React from "react";
 import {CarTwoTone, MenuFoldOutlined, MenuUnfoldOutlined} from "@ant-design/icons";
 import logo from './f1_logo.png';
-
+import { Button } from 'antd';
+import { LoginOutlined } from '@ant-design/icons';
 const { Header, Sider, Content } = Layout;
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
                 </div>
             </Sider>
             <Layout className="site-layout">
-                <Header className="site-layout-background" style={{ padding: 0 }}>
+                <Header className="site-layout-background" style={{ padding: 0, backgroundColor: '282c34' }}>
+                <Button type="primary" className="login"><LoginOutlined />Login</Button>
                 </Header>
                 <Content
                     className="site-layout-background"
