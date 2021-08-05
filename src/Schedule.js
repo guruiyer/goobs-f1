@@ -4,13 +4,15 @@ import { Component, React } from 'react';
 import axios from 'axios'
 import { Layout, Spin, Card, Col, Row } from 'antd';
 import {Link} from "react-router-dom";
-import red_bull_ring from './red_bull_ring.webp';
-import spain from './spain.webp';
-import imola from './imola.webp';
-import monaco from './monaco.webp';
-import azerbaijan from './azerbaijan.webp';
-import france from './france.webp';
-import default_image  from './default.png';
+import red_bull_ring from './assets/images/circuits/red_bull_ring.webp';
+import spain from './assets/images/circuits/spain.webp';
+import imola from './assets/images/circuits/imola.webp';
+import monaco from './assets/images/circuits/monaco.webp';
+import azerbaijan from './assets/images/circuits/azerbaijan.webp';
+import france from './assets/images/circuits/france.webp';
+import britain from './assets/images/circuits/britain.webp';
+import hungaroring from './assets/images/circuits/hungaroring.webp';
+import default_image  from './assets/images/circuits/default.png';
 
 const { Header} = Layout;
 
@@ -50,12 +52,12 @@ const images = [
             'isDefault': false},
 
             {'title' : 'silverstone',
-            'image': default_image,
-            'isDefault': true},
+            'image': britain,
+            'isDefault': false},
 
             {'title' : 'hungaroring',
-            'image': default_image,
-            'isDefault': true},
+            'image': hungaroring,
+            'isDefault': false},
 
             {'title' : 'spa',
             'image': default_image,
@@ -120,6 +122,8 @@ function lContentStyle(imageTitle) {
 }
 
 function isDefaultImage(imageTitle) {
+    // 1d5aa2e84c9a486b85f3185307d8ee1e
+    // https://newsapi.org/v2/everything?qInTitle=(Formula+1)+OR+(F1)&apiKey=1d5aa2e84c9a486b85f3185307d8ee1e&language=en&sortBy=relevancy&sources=bbc-news,bleacher-report,google-news,abc-news-au,bbc-sport
     var imageObj = images.find(image => image.title === imageTitle)
     var image = imageObj?.isDefault
     return image
@@ -182,7 +186,6 @@ export default class Schedule extends Component {
 
         return (    
             <div style={{ }}>
-                <Header style={{ color: 'white',textAlign: "center"}}>2021 Race Schedule</Header>     
                 <div> <br/> </div>
                     <Row gutter={[8, 40]}>
                         {this.state.scheduleTable.map(race =>      

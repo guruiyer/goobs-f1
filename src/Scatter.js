@@ -1,18 +1,6 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
-const data = {
-  labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
-  datasets: [
-    {
-      label: 'Points Tracker',
-      data: [18, 43, 61, 80, 105, 130, 155, 167, 182],
-      fill: false,
-      backgroundColor: '#161c2c',
-      borderColor: '#161c2c',
-    },
-  ],
-};
 
 const options = {
   scales: {
@@ -26,13 +14,42 @@ const options = {
   },
 };
 
-export const Scatter = () => (
-  <>
-    <div className='header'>
-      <h1 className='title'></h1>
-    </div>
-    <Line data={data} options={options} />
-  </>
-);
+export const Scatter = (props) => {
+  let x = [];
+  let y = [];
+  props.seasonPointsTable.map((result, index) => { 
+    x.push(result.a)
+    y.push(result.b)
+  })
+  console.log(y)
+  const cumulativeSum = (sum => value => sum += value)(0);
+  var result = y.map(function (u) { 
+    return parseInt(u, 10); 
+  });
+  console.log(result)
+  const cum = result.map(cumulativeSum)
+  const data = {
+    labels: x,
+    datasets: [
+      {
+        label: 'Points Over Season',
+        data: cum,
+        fill: false,
+        backgroundColor: 'rgba(255, 99, 132, 1)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+      },
+    ],
+  };
+  return (  
+    <React.Fragment>
+    <>
+      <div className='header'>
+        <h1 className='title'></h1>
+      </div>
+      <Line data={data} options={options} />
+    </>
+     </React.Fragment>
+  );
+}
 
 export default Scatter;

@@ -15,6 +15,7 @@
     "antd": "^4.15.3",
     "axios": "^0.21.1",
     "chart.js": "^3.3.2",
+    "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.3",
     "react-dom": "^17.0.2",
@@ -22,6 +23,7 @@
     "react-scripts": "4.0.3",
     "react-spinners": "^0.11.0",
     "react-spinners-kit": "^1.9.1",
+    "sass": "^1.35.2",
     "weather-icons-react": "^1.2.0",
     "web-vitals": "^1.1.1"
   },

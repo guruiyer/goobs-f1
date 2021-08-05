@@ -27,7 +27,7 @@ export const RaceDetail = (props) => {
 
     return (     
         <React.Fragment>  
-            <Header style={{color: 'white', textAlign: "center"}}>{a}</Header>   
+            {/*<Header style={{color: 'white', textAlign: "center"}}>{a}</Header>   */}
             <WeatherClient countrycode={a} country={z}/>
         </React.Fragment>
     );

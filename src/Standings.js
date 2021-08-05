@@ -2,16 +2,12 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
 import axios from 'axios'
-import { Table } from 'antd';
+import { Spin, Table, Layout, Tabs} from 'antd';
 import 'antd/dist/antd.css';
 import './index.css';
-import { Layout } from 'antd';
 import { withRouter } from "react-router";
-import { Tabs } from 'antd';
 import { DriverProfile } from './DriverProfile';
 import { TrophyOutlined, ToolOutlined } from '@ant-design/icons';
-import { CircleSpinner } from "react-spinners-kit";
-import fia from './assets/fia.png';
 
 const { Header } = Layout;
 const standingsURL = "http://ergast.com/api/f1/current/driverStandings.json";
@@ -157,15 +153,13 @@ export const Standings = () => {
     return (
         <React.Fragment>         
             {isLoading && 
-                <div style={style}>
-                    <CircleSpinner size={30} color="#282c34" />
-                </div> 
+                <div className="example"><Spin size="large" /> </div>
+                
             }
             <Tabs defaultActiveKey="1" onChange={callback}>
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <TabPane tab={<span><TrophyOutlined/>Driver Standings</span>} key="1">
                     <div>
-                        <Header style={{color: 'white', textAlign: "center"}}><img className="ias" src={fia} /> {Races.season} Formula 1 World Championship Driver Standings</Header>
                             <Table pagination={{position: ['bottomLeft'], size: "small"}} columns={columns} dataSource={driverTable} 
                                 onRow={(row) => ({
                                     onClick: () => {
@@ -175,8 +169,7 @@ export const Standings = () => {
                 </TabPane>
                 <TabPane tab={<span><ToolOutlined/>Constructor Standings</span>} key="2">
                     <div>
-                        <Header style={{color: 'white', textAlign: "center"}}>{Races.season} Formula 1 World Championship Constructor Standings</Header>
-                            <Table pagination={{hideOnSinglePage: true}} columns={constructorColumns} dataSource={constructorTable}/>
+                        <Table pagination={{hideOnSinglePage: true}} columns={constructorColumns} dataSource={constructorTable}/>
                     </div>
                 </TabPane>
             </Tabs>

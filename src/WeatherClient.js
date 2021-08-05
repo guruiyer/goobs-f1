@@ -8,12 +8,10 @@ import { WiBarometer } from './styles/css/weather-icons.min.css';
 import { Spin } from 'antd';
 import { Card, Col, Row } from 'antd';
 import { Statistic } from 'antd';
-import austria from './Austria.png';
+import austria from './assets/images/circuitdetails/hungaroring.png';
 
 const { Header} = Layout;
-
 const { Countdown } = Statistic;
-
 const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
 
 export const WeatherClient = (props) => {
@@ -21,7 +19,10 @@ export const WeatherClient = (props) => {
     const [data, setData] = useState([]);
     const countrycode = props.countrycode
     const country = props.country
-    const locationURL = `http://api.openweathermap.org/data/2.5/weather?q=${country}&appid=fe503fefffde5b83dc8a448795afa977`;  
+    const api_key = process.env.REACT_APP_WEATHER_API_KEY;
+    console.log("api_key" + api_key)
+    const locationURL = `http://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${api_key}`;  
+    console.log(locationURL)
     const gridStyle = {
         width: '100%',
         textAlign: 'center',

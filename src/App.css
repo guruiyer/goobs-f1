@@ -42,7 +42,7 @@
 .trigger {
   padding: 0 24px;
   font-size: 18px;
-  line-height: 64px;
+  line-height: 14px;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -127,9 +127,31 @@ p {
   width: 25px;
 }
 
+.rolex{
+  height: 50px;
+  margin: 6px;
+}
+
 .login {
   text-align: right;
-  margin-top:15px;
+  
   margin-right: 65px;
   float: right;
 }
+
+
+.ant-layout-header {
+  line-height: 0px;
+}
+
+.example {
+  margin: 20px 0;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+  .example {
+    background: rgba(255,255,255,0.08);
+  }

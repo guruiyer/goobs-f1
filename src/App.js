@@ -5,9 +5,12 @@ import './index.css';
 import {Layout, Table} from "antd";
 import React from "react";
 import {CarTwoTone, MenuFoldOutlined, MenuUnfoldOutlined} from "@ant-design/icons";
-import logo from './f1_logo.png';
+import logo from './assets/images/f1_logo.png';
 import { Button } from 'antd';
 import { LoginOutlined } from '@ant-design/icons';
+import './Countdown.scss';
+import RaceCountdown from './RaceCountdown';
+
 const { Header, Sider, Content } = Layout;
 
 function App() {
@@ -20,16 +23,19 @@ function App() {
                     <Navbar/>
                 </div>
             </Sider>
-            <Layout className="site-layout">
-                <Header className="site-layout-background" style={{ padding: 0, backgroundColor: '282c34' }}>
-                <Button type="primary" className="login"><LoginOutlined />Login</Button>
-                </Header>
+            <Layout className="site-layout" > 
+            
+               
+                <div><RaceCountdown/></div>
+                
+   
                 <Content
                     className="site-layout-background"
                     style={{
-                        margin: '36px 56px'
+                        margin: '25px 40px'
                     }}
                 >
+                    
                     <Main />
                 </Content>
             </Layout>

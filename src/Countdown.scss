@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 0vh;
+  
+    h1 {
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+  
+    .countdown {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+    }
+  
+    article {
+      margin: 2px;
+      height: 30px;  
+      p {
+
+        border-radius: 5px;
+        width: 75px;
+        
+  
+        box-shadow: 0 2px 4px rgba(0,0,0, 0.3);
+        font-size: 18px;
+        font-weight: bold;
+      }
+  
+      h3 {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+      }
+    }
+  }

@@ -11,7 +11,7 @@ export const Navbar = () => {
                 <Link to='/'>Season Standings</Link>
             </Menu.Item>
             <Menu.Item key="" icon={<AuditOutlined />}>
-                <Link to='/newsroom'>The Newsroom</Link>
+                <Link to='/news'>The Newsroom</Link>
             </Menu.Item>
             <Menu.Item key="/SeasonVisualiser" icon={<LineChartOutlined />}>
                 <Link to='/scatter'>Season Visualiser</Link>
