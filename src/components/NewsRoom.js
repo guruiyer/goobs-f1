@@ -1,12 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import '../App.css';
-import 'antd/dist/antd.css';
+import '../App.less';
 import axios from 'axios'
-import 'antd/dist/antd.css';
 import '../index.css';
 import '../News.scss';
-import { CircleSpinner } from "react-spinners-kit";
-import { Layout, Spin, Card, Col, Row } from 'antd';
+import { Card, Col, Row } from 'antd';
 
 const json = [
         {

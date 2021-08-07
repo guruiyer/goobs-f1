@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
-import './App.css';
+import './App.less';
 import rolex from './assets/images/rolex.png';
 import axios from 'axios'
 import moment from 'moment';
 import './Countdown.scss';
+
 function RaceCountdown() {
+
   const [days, setDays] = useState(0)
   const [hours, setHours] = useState(0)
   const [minutes, setMinutes] = useState(0)
@@ -65,24 +67,17 @@ function RaceCountdown() {
               <p>{seconds}</p>
               <h3>Seconds</h3>
             </article>
-            <article>
-              
-              
+            <article>   
             </article>
             <article>
-              
-              
             </article>
             <article>
-              
-              
             </article>
             <article>
               <h3></h3>
               <h3>to {data.raceName}</h3>
               <h3>29 Aug, 11:30 PM local time</h3>
             </article>
-            
           </div>
         </section>
       )}

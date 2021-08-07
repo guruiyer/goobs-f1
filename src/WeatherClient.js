@@ -1,7 +1,5 @@
-import './App.css';
-import 'antd/dist/antd.css';
+import './App.less';
 import React, { useEffect, useState } from 'react';
-import { Component } from 'react';
 import axios from 'axios'
 import { Layout } from 'antd';
 import { WiBarometer } from './styles/css/weather-icons.min.css';
@@ -17,16 +15,9 @@ const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is 
 export const WeatherClient = (props) => {
     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState([]);
-    const countrycode = props.countrycode
     const country = props.country
     const api_key = process.env.REACT_APP_WEATHER_API_KEY;
-    console.log("api_key" + api_key)
     const locationURL = `http://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${api_key}`;  
-    console.log(locationURL)
-    const gridStyle = {
-        width: '100%',
-        textAlign: 'center',
-    };  
 
     useEffect(() => {
         const fetchdata = async () => {
@@ -69,9 +60,6 @@ export const WeatherClient = (props) => {
                 </Row>
             </div>
         </React.Fragment>
-    );
-
-
-    
+    ); 
 }
 

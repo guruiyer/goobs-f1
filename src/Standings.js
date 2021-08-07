@@ -1,15 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import './App.css';
-import 'antd/dist/antd.css';
+import './App.less';
 import axios from 'axios'
 import { Spin, Table, Layout, Tabs} from 'antd';
-import 'antd/dist/antd.css';
 import './index.css';
 import { withRouter } from "react-router";
 import { DriverProfile } from './DriverProfile';
 import { TrophyOutlined, ToolOutlined } from '@ant-design/icons';
 
-const { Header } = Layout;
 const standingsURL = "http://ergast.com/api/f1/current/driverStandings.json";
 const constructorURL = "http://ergast.com/api/f1/current/constructorStandings.json";
 const { TabPane } = Tabs;

@@ -1,8 +1,7 @@
-import './App.css';
-import 'antd/dist/antd.css';
+import './App.less';
 import { Component, React } from 'react';
 import axios from 'axios'
-import { Layout, Spin, Card, Col, Row } from 'antd';
+import { Spin, Card, Col, Row } from 'antd';
 import {Link} from "react-router-dom";
 import red_bull_ring from './assets/images/circuits/red_bull_ring.webp';
 import spain from './assets/images/circuits/spain.webp';
@@ -14,10 +13,8 @@ import britain from './assets/images/circuits/britain.webp';
 import hungaroring from './assets/images/circuits/hungaroring.webp';
 import default_image  from './assets/images/circuits/default.png';
 
-const { Header} = Layout;
 
 const URL = "http://ergast.com/api/f1/current.json";
-
 const images = [
             {'title' : 'red_bull_ring',
             'image' : red_bull_ring,
@@ -122,8 +119,6 @@ function lContentStyle(imageTitle) {
 }
 
 function isDefaultImage(imageTitle) {
-    // 1d5aa2e84c9a486b85f3185307d8ee1e
-    // https://newsapi.org/v2/everything?qInTitle=(Formula+1)+OR+(F1)&apiKey=1d5aa2e84c9a486b85f3185307d8ee1e&language=en&sortBy=relevancy&sources=bbc-news,bleacher-report,google-news,abc-news-au,bbc-sport
     var imageObj = images.find(image => image.title === imageTitle)
     var image = imageObj?.isDefault
     return image
@@ -135,9 +130,7 @@ function LBoxContent(props) {
     <br/>
     <br/>
     <br/>
-    {props.race.CircuitID == "ricard" && 
-                <br/>
-            }
+    {props.race.CircuitID == "ricard" && <br/>}
     {defaultImageFlag && (props.race.RaceName)}
     <br/>
     <p>{props.race.RaceTime}</p>
@@ -184,12 +177,12 @@ export default class Schedule extends Component {
                     </div> 
         }
 
-        return (    
-            <div style={{ }}>
+        return (   
+            <div>
                 <div> <br/> </div>
                     <Row gutter={[8, 40]}>
                         {this.state.scheduleTable.map(race =>      
-                            <Col className="gutter-row" span={4}>
+                            <Col md={24} lg={12} xl={6} xxl={4}>
                                 <Link to={{
                                     pathname: `/RaceDetails/${race.RaceName}`, 
                                     country: `${race.Country}`
